@@ -19,7 +19,7 @@ function reservarArmario() {
   // obter tipo de armário selecionado pelo usuário no html.
   let tipoSelecionado = document.getElementById("tipoArmario").value;
   
-  // na lista, filtrar apenas os armários que estão disponíveis e que são acessiveis ao usuário.
+  // na lista, filtrar apenas os armários que estão disponíveis e que são acessíveis ao usuário.
   let armariosDisponiveis = armarios.filter(a => a.formato === tipoSelecionado && a.status === true && usuario.acessibilidade === a.acessivel);
   
   // caso não exista armário disponível, retorna para o usuário mensagem.
@@ -28,19 +28,38 @@ function reservarArmario() {
     return;
   }
   
-  // Caso exista armário(s) disponíveil, seguimos sorteando uma opção. 
+  // Caso exista armário(s) disponível(eis), sorteamos uma opção. 
   let armarioSorteado = armariosDisponiveis[Math.floor(Math.random() * armariosDisponiveis.length)];
   
-  // Depois localizamos o armário emprestado na lista de armarios e mudamos o status do armário.
-  let armarioEmprestado = armarios.find(armario => armario.id === armarioSorteado.id).status = false;
+  // Localizamos o armário emprestado na lista e mudamos o status.
+  let armarioEmprestado = armarios.find(armario => armario.id === armarioSorteado.id);
+  armarioEmprestado.status = false;
   
-  // Finalmente, mudamos a pendencia do usuário para verdadeira.
+  // Registra a data e hora da reserva
+  let dataReserva = new Date();
+  armarioEmprestado.dataReserva = dataReserva;
+  
+  // Calcula a data e hora para entrega (24h depois)
+  let dataEntrega = new Date(dataReserva);
+  dataEntrega.setHours(dataReserva.getHours() + 24);
+  armarioEmprestado.dataEntrega = dataEntrega;
+
+  // Atualiza a pendência do usuário
   usuario.pendencia = true;
   
-  // Impmimimos uma mensagem de reserva para o usuário.
-  document.getElementById("resultado").innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso!`;
+  // Formata a data e hora de entrega para exibição
+  let dataEntregaFormatada = dataEntrega.toLocaleString("pt-BR", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  });
+
+  // Exibe a mensagem com a data de entrega
+  document.getElementById("resultado").innerText = `Olá, ${usuario.nome}! O armário ${armarioSorteado.id} foi reservado com sucesso! A chave deve ser devolvida até: ${dataEntregaFormatada}.`;
 
   console.log(usuario);
   console.log(armarios);
-
 }
