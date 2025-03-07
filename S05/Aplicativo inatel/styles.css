@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    max-width: 414px;
+    width: 100%;
+    padding-left: 20px;
+    background-color: aqua;
+    margin: 10px;
+}
