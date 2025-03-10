@@ -3,7 +3,8 @@
     --cor-texto: black;
     --cor-back1: #FAFCFB;
     --cor-back2: #54592C;
-    --cor-sombra: #D9C5A0;
+    --cor-sombra: black;
+    --cor-backdark:#162133 ;
 }
 
 *{
@@ -21,12 +22,14 @@ body{
     flex-direction: column;
     font-family: "Arimo", sans-serif;
     gap: 8px;
-
+    background-color: var(--cor-back1);
 }
 
 header,.mensagens,.aulas,.noticias{
     padding: 16px;
     gap: 8px;
+    color: var(--cor-texto);
+    box-shadow: 0 0 10px var(--cor-sombra);
 }
 
 
@@ -43,19 +46,32 @@ header {
     height: auto;
 }
 
+.menu{
+    display: none;
+}
+
+#icon_menu{
+    color: var(--cor-icone);
+    font-size: 30px ;
+    cursor: pointer;
+}
+
+#user_icon{
+    color: var(--cor-icone);
+    font-size: 30px ;
+}
+
 .mensagens{
     margin: 16px auto;
     display: flex;
     flex-direction: column;
 }
 .aulas{
-    background-color: aqua;
     margin: 16px auto;
     display: flex;
     flex-direction: column;
 }
 .noticias{
-    background-color: aqua;
     margin: 16px auto;
     display: flex;
     flex-direction: column;
