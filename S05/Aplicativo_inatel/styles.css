@@ -2,6 +2,8 @@
     --cor-icone: #4970BF;
     --cor-texto: black;
     --cor-back1: #FAFCFB;
+    --cor-back2: #54592C;
+    --cor-sombra: #D9C5A0;
 }
 
 *{
@@ -10,53 +12,49 @@
     box-sizing: border-box;
 }
 
-.svg_logo_inatel {
-    width: 150px;  
-    height: auto;  
-    fill: blue; 
-}
-
-
-header {
-    display: flex;
-    max-width: 414px;
-    width: 100%;
-    padding-left: 20px;
-    margin: 16px auto;
-    flex-direction: column;
-}
-
 body{
     max-width: 414px;
     width: 100%;
-    padding-left: 20px;
+    padding: 16px;
     margin: 16px auto;
     display: flex;
     flex-direction: column;
     font-family: "Arimo", sans-serif;
+    gap: 8px;
+
+}
+
+header,.mensagens,.aulas,.noticias{
+    padding: 16px;
+    gap: 8px;
+}
+
+
+header {
+    display: grid;
+    padding: 16px;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+}
+
+.svg_logo_inatel {
+    fill: var(--cor-icone);
+    width: 100%;
+    height: auto;
 }
 
 .mensagens{
-    max-width: 414px;
-    width: 100%;
-    padding-left: 20px;
     margin: 16px auto;
     display: flex;
     flex-direction: column;
 }
 .aulas{
-    max-width: 414px;
-    width: 100%;
-    padding-left: 20px;
     background-color: aqua;
     margin: 16px auto;
     display: flex;
     flex-direction: column;
 }
 .noticias{
-    max-width: 414px;
-    width: 100%;
-    padding-left: 20px;
     background-color: aqua;
     margin: 16px auto;
     display: flex;
