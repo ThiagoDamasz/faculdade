@@ -1,13 +1,45 @@
+:root{
+    --cor-icone: #4970BF;
+    --cor-texto: black;
+    --cor-back1: #FAFCFB;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.svg_logo_inatel {
+    width: 150px;  
+    height: auto;  
+    fill: blue; 
+}
+
+
+header {
+    display: flex;
+    max-width: 414px;
+    width: 100%;
+    padding-left: 20px;
+    margin: 16px auto;
+    flex-direction: column;
+}
+
+body{
+    max-width: 414px;
+    width: 100%;
+    padding-left: 20px;
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Arimo", sans-serif;
+}
+
 .mensagens{
     max-width: 414px;
     width: 100%;
     padding-left: 20px;
-    background-color: aqua;
     margin: 16px auto;
     display: flex;
     flex-direction: column;
