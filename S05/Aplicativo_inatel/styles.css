@@ -1,19 +1,19 @@
-:root{
+:root {
     --cor-icone: #4970BF;
     --cor-texto: black;
     --cor-back1: #FAFCFB;
     --cor-back2: #54592C;
     --cor-sombra: black;
-    --cor-backdark:#162133 ;
+    --cor-backdark: #162133;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     max-width: 414px;
     width: 100%;
     padding: 16px;
@@ -25,7 +25,10 @@ body{
     background-color: var(--cor-back1);
 }
 
-header,.mensagens,.aulas,.noticias{
+header,
+.mensagens,
+.aulas,
+.noticias {
     padding: 16px;
     gap: 8px;
     color: var(--cor-texto);
@@ -46,33 +49,117 @@ header {
     height: auto;
 }
 
-.menu{
-    display: none;
+.menu button {
+    display: flex;
 }
 
-#icon_menu{
+#icon_menu {
     color: var(--cor-icone);
-    font-size: 30px ;
+    font-size: 30px;
     cursor: pointer;
 }
 
-#user_icon{
+#user_icon {
     color: var(--cor-icone);
-    font-size: 30px ;
+    font-size: 30px;
 }
 
-.mensagens{
+.mensagens {
     margin: 16px auto;
     display: flex;
     flex-direction: column;
 }
-.aulas{
+
+.aulas {
     margin: 16px auto;
     display: flex;
     flex-direction: column;
 }
-.noticias{
+
+.noticias {
     margin: 16px auto;
     display: flex;
     flex-direction: column;
+}
+
+h3 {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--cor-text);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+p {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 11px;
+    color: var(--cor-text);
+    line-height: 1.5;
+    orphans: 3;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cor-back1);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px var(--cor-sombra);
+}
+
+.carousel {
+    display: realtive;
+    /* mudaremos para flex posteriormente */
+}
+
+.card {
+    min-width: 100%;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.info {
+    padding: 10px
+}
+
+.icon {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 2px;
+    width: 18px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.noticias button {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
 }
