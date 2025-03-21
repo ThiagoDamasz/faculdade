@@ -116,8 +116,7 @@ p {
 }
 
 .carousel {
-    display: realtive;
-    /* mudaremos para flex posteriormente */
+    display: flex;
 }
 
 .card {
