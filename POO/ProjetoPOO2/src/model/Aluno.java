@@ -8,13 +8,11 @@ public class Aluno extends Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     private String matricula;
     private List<Curso> cursosInscritos;
-    private List<Atividade> atividades;
 
     public Aluno(int idUsuario, String email, String senha, String matricula) {
         super(idUsuario, email, senha, "aluno");
         this.matricula = matricula;
         this.cursosInscritos = new ArrayList<>();
-        this.atividades = new ArrayList<>();
     }
 
     // Getters e Setters
@@ -30,9 +28,6 @@ public class Aluno extends Usuario implements Serializable {
         return cursosInscritos;
     }
 
-    public List<Atividade> getAtividades() {
-        return atividades;
-    }
 
     // Métodos auxiliares
     public void inscreverCurso(Curso curso) {
@@ -41,9 +36,6 @@ public class Aluno extends Usuario implements Serializable {
         }
     }
 
-    public void adicionarAtividade(Atividade atividade) {
-        atividades.add(atividade);
-    }
 
     @Override
     public boolean autenticar(String email, String senha) { // autenticacao do aluno com nome email e matricula

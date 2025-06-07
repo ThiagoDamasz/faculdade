@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tesouraria - Boletos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="styles_componente.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <i class="fa-solid fa-bars" id="icon_menu" onclick="openMenu()"></i>
+        <h1 style="text-align:center; color: var(--cor-icone); font-size: 18px;">Tesouraria</h1>
+  </header>
+
+
+    <div class="menu" id="menu">
+        <button onclick="closeMenu(); returnMenu()">Menu</button>
+        <button onclick="closeMenu(); temaClaro()">Tema claro</button>
+        <button onclick="closeMenu(); temaEscuro()">Tema escuro</button>
+    </div>
+  
+  <main class="mensagens">
+    <h3>Seus Boletos</h3>
+
+    <section class="lista-boletos">
+      <div class="boleto card">
+        <p><strong>Referência:</strong> Mensalidade Junho 2025</p>
+        <p><strong>Valor:</strong> R$ 1.200,00</p>
+        <p><strong>Vencimento:</strong> 10/06/2025</p>
+        <a href="#" class="btn-boleto" download>📄 Baixar Boleto</a>
+      </div>
+
+      <div class="boleto card">
+        <p><strong>Referência:</strong> Material Didático 2025.1</p>
+        <p><strong>Valor:</strong> R$ 250,00</p>
+        <p><strong>Vencimento:</strong> 15/06/2025</p>
+        <a href="#" class="btn-boleto" download>📄 Baixar Boleto</a>
+      </div>
+    </section>
+  </main>
+
+  <section class="info-pagamento aulas">
+    <h3>Informações para Pagamento via Pix ou Transferência</h3>
+    <p><strong>Chave Pix:</strong> financeiro@inatel.br</p>
+    <p><strong>Banco:</strong> Banco do Brasil</p>
+    <p><strong>Agência:</strong> 1234-5</p>
+    <p><strong>Conta:</strong> 67890-1</p>
+    <p><strong>Titular:</strong> Instituto Nacional de Telecomunicações</p>
+    <p><strong>Identificador Bancário:</strong> CPF/CNPJ: 00.000.000/0001-00</p>
+  </section>
+
+</body>
+</html>

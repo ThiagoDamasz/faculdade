@@ -29,4 +29,5 @@ public class Professor extends Usuario implements Serializable {
     public boolean autenticar(String email, String senha) {
         return this.email.equals(email) && this.senha.equals(senha);
     }
+
 }

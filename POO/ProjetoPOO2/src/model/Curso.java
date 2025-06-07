@@ -10,7 +10,6 @@ public class Curso implements Serializable {
     private String nome;
     private String descricao;
     private Professor professor;
-    private List<Modulo> modulos;
     private List<Inscricao> inscricoes;
 
     public Curso(int idCurso, String nome, String descricao, Professor professor) {
@@ -18,7 +17,6 @@ public class Curso implements Serializable {
         this.nome = nome;
         this.descricao = descricao;
         this.professor = professor;
-        this.modulos = new ArrayList<>();
         this.inscricoes = new ArrayList<>();
     }
 
@@ -39,18 +37,12 @@ public class Curso implements Serializable {
         return professor;
     }
 
-    public List<Modulo> getModulos() {
-        return modulos;
-    }
 
     public List<Inscricao> getInscricoes() {
         return inscricoes;
     }
 
     // Métodos auxiliares
-    public void adicionarModulo(Modulo modulo) {
-        modulos.add(modulo);
-    }
 
     public void adicionarInscricao(Inscricao inscricao) {
         inscricoes.add(inscricao);

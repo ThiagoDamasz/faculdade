@@ -2,6 +2,9 @@ package model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Inscricao implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -46,4 +49,6 @@ public class Inscricao implements Serializable {
     public void setDataInscricao(LocalDate dataInscricao) {
         this.dataInscricao = dataInscricao;
     }
+
+
 }

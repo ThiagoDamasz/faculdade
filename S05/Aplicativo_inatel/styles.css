@@ -49,19 +49,44 @@ header {
     height: auto;
 }
 
+.menu{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--cor-back1);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: none;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
 .menu button {
-    display: flex;
+    display: block;
+    margin-bottom:15px;
+    background-color: transparent;
+    color: var(--cor-texto);
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.menu button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #icon_menu {
     color: var(--cor-icone);
     font-size: 30px;
     cursor: pointer;
-}
-
-#user_icon {
-    color: var(--cor-icone);
-    font-size: 30px;
+    text-decoration: none;
+    background: none;
+    border: none;
 }
 
 .mensagens {
@@ -85,10 +110,10 @@ header {
 h3 {
     font-family: "Arimo", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 400;
     font-style: normal;
     font-size: 14px;
-    color: var(--cor-text);
+    color: var(--cor-texto);
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -99,7 +124,7 @@ p {
     font-weight: weight;
     font-style: normal;
     font-size: 11px;
-    color: var(--cor-text);
+    color: var(--cor-texto);
     line-height: 1.5;
     orphans: 3;
     padding-left: 5px;
@@ -161,4 +186,70 @@ p {
 
 #nextBtn {
     right: 10px;
+}
+
+/* Botão de boleto */
+.btn-boleto {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--cor-icone);
+    color: white;
+    padding: 10px 16px; /* Botão maior */
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 3px 6px var(--cor-sombra);
+    transition: background-color 0.3s ease;
+}
+
+
+
+.btn-boleto:hover {
+    background-color: #365a94;
+}
+
+/* Estilo da lista de boletos */
+.lista-boletos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 8px;
+}
+
+.boleto {
+    background-color: var(--cor-back1);
+    padding: 20px; /* Aumentado */
+    border-radius: 12px;
+    box-shadow: 0 0 12px var(--cor-sombra);
+    font-size: 14px; /* Tamanho de texto maior */
+    width: 100%;
+}
+
+.boleto p {
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+
+/* Estilo das infos de pagamento */
+.info-pagamento {
+    background-color: var(--cor-back1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--cor-sombra);
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.info-pagamento h3 {
+    color: var(--cor-icone);
+    margin-bottom: 8px;
+}
+
+.info-pagamento p {
+    color: var(--cor-texto);
+    font-family: "Arimo", sans-serif;
+    font-size: 12px;
+    margin: 4px 0;
+    padding-left: 5px;
 }

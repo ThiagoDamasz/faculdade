@@ -1,6 +1,5 @@
 package view;
 
-import java.util.Scanner;
 
 public class MenuPrincipal {
 
@@ -9,6 +8,7 @@ public class MenuPrincipal {
                 "Se sim digite 's' para fazer o login\n" +
                 "Se não digite 'n' para criar uma conta");
     }
+
 
 
 }
