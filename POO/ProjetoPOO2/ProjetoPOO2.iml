@@ -10,6 +10,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 =======
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
@@ -20,5 +21,17 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+>>>>>>> 9919fa14457c0db86d33baeeed290019f6e93e4a
 >>>>>>> e50788ab30871a62b5c9afabdd7b8653658b281f
 </module>
